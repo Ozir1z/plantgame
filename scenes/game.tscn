@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dfre3rca5lns1"]
+
+[ext_resource type="Texture2D" uid="uid://bur4qcaskefm" path="res://assets/cocnept art.jpg" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://drbkq4jc2udxl" path="res://scripts/game.gd" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://8q3qbg5pkuf1" path="res://scenes/player.tscn" id="3_lnu2h"]
+
+[node name="Game" type="Node" unique_id=52459269]
+script = ExtResource("1_yqjtg")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2133771871]
+offset_right = 1704.0
+offset_bottom = 1341.0
+texture = ExtResource("1_uwrxv")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=2042016785]
+anchor_mode = 0
+
+[node name="Player" parent="Camera" unique_id=1991074366 instance=ExtResource("3_lnu2h")]
+position = Vector2(874, 829)
