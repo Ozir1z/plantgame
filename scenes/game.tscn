@@ -16,9 +16,6 @@ texture = ExtResource("1_uwrxv")
 [node name="Camera" type="Camera2D" parent="." unique_id=2042016785]
 anchor_mode = 0
 
-[node name="Player" parent="." unique_id=1991074366 instance=ExtResource("3_lnu2h")]
-position = Vector2(874, 829)
-
 [node name="Plant" parent="." unique_id=780863893 instance=ExtResource("3_lbhrr")]
 position = Vector2(317, 534)
 
@@ -27,3 +24,6 @@ position = Vector2(877, 302)
 
 [node name="Plant3" parent="." unique_id=828529665 instance=ExtResource("3_lbhrr")]
 position = Vector2(1437, 685)
+
+[node name="Player" parent="." unique_id=1991074366 instance=ExtResource("3_lnu2h")]
+position = Vector2(874, 829)
