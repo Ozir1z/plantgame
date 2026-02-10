@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cp3ej2ka2vxhd"]
+
+[ext_resource type="Script" uid="uid://coa8rnwgotbed" path="res://scripts/plant.gd" id="1_fi0kw"]
+[ext_resource type="Texture2D" uid="uid://cx7nrwkiowce2" path="res://icon.svg" id="2_odjdt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odjdt"]
+size = Vector2(130, 128)
+
+[node name="Plant" type="Area2D" unique_id=659796841]
+script = ExtResource("1_fi0kw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=929593160]
+modulate = Color(0, 0.7137255, 0.13333334, 1)
+texture = ExtResource("2_odjdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2124912925]
+shape = SubResource("RectangleShape2D_odjdt")

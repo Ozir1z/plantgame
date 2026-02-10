@@ -3,8 +3,25 @@
 [ext_resource type="Texture2D" uid="uid://cx7nrwkiowce2" path="res://icon.svg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b5h1wu2v06i6m" path="res://scripts/player.gd" id="1_g2els"]
 
-[node name="Player" type="Node2D" unique_id=1991074366]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(126, 126)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 161.64467
+
+[node name="Player" type="CharacterBody2D" unique_id=1043186744]
 script = ExtResource("1_g2els")
 
 [node name="CharacterSprite" type="Sprite2D" parent="." unique_id=615584957]
 texture = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1966606153]
+shape = SubResource("RectangleShape2D_g2els")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=585752615]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1480515761]
+shape = SubResource("CircleShape2D_g2els")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
